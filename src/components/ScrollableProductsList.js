@@ -91,7 +91,7 @@ function ScrollableProductsList({ products, selectedProductID, componentParent }
 }
 
 
-const ImageLinkWithPlaceholder = React.memo(({ product, isThisTheSelectedProduct, scrollTo }) => {
+const ImageLinkWithPlaceholder = React.memo(function component({ product, isThisTheSelectedProduct, scrollTo }){
     const [didImageLoad, setDidImageLoad] = useState(false);
     const [didUrlChangeByClickingThisComponent, setDidUrlChangeByClickingThisComponent] = useState(false);
     const linkRef = useRef(null);
@@ -145,6 +145,6 @@ const ImageLinkWithPlaceholder = React.memo(({ product, isThisTheSelectedProduct
             </a>
         </Link>
     )
-})
+});
 
 export default ScrollableProductsList;
