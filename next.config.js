@@ -16,7 +16,7 @@ module.exports = {
     return [
       {
         source: '/',
-        destination: '/products/',
+        destination: '/products/Fall_Limited_Edition_Sneakers/999',
         permanent: true,
       },
       {
