@@ -196,7 +196,7 @@ export async function getStaticPaths(){
   paths.forEach((path) => console.log(path.params.id));
   return {
     paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
