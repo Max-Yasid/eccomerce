@@ -1,12 +1,8 @@
-import Link from 'next/link';
-import React from 'react';
+import { NextResponse } from 'next/server';
 import ProductsLayout from '../components/productsLayout';
 
 function Products(props) {
-    return (
-        <div>
-        </div>
-    );
+    return NextResponse.redirect('/hello-nextjs');
 }
 
 Products.getLayout = function getLayout(page){

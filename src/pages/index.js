@@ -1,11 +1,8 @@
-import Link from 'next/link';
-import styles from '../styles/Home.module.css'
+import { NextResponse } from 'next/server';
+
 
 export default function Home(props) {
-  return (
-    <div className={styles.container}>
-    </div>
-  )
+  return NextResponse.redirect('/hello-nextjs');
 }
 
 export async function getStaticProps(){
