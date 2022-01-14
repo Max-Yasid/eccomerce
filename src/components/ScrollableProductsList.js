@@ -91,7 +91,7 @@ function ScrollableProductsList({ products, selectedProductID, componentParent }
 }
 
 
-const ImageLinkWithPlaceholder = React.memo(function component({ product, isThisTheSelectedProduct, scrollTo }){
+const ImageLinkWithPlaceholder = React.memo(function Component({ product, isThisTheSelectedProduct, scrollTo }){
     const [didImageLoad, setDidImageLoad] = useState(false);
     const [didUrlChangeByClickingThisComponent, setDidUrlChangeByClickingThisComponent] = useState(false);
     const linkRef = useRef(null);
@@ -100,7 +100,7 @@ const ImageLinkWithPlaceholder = React.memo(function component({ product, isThis
             const componentLink = linkRef.current;
             if(componentLink){
                 const scrollbarComponentHalfWidth = componentLink.parentElement.parentElement.clientWidth / 2;
-                const componentHalfWidth =  componentLink.clientWidth / 2;
+                const componentHalfWidth = componentLink.clientWidth / 2;
                 const bonusOffsetToCenterElementInTheScrollbar = scrollbarComponentHalfWidth - componentHalfWidth;
                 scrollTo(componentLink.offsetLeft - bonusOffsetToCenterElementInTheScrollbar, "auto");
             }
