@@ -1,8 +1,11 @@
-import { NextResponse } from 'next/server';
+import React from 'react';
 import ProductsLayout from '../components/productsLayout';
 
 function Products(props) {
-    return NextResponse.redirect('/hello-nextjs');
+    return (
+        <div>
+        </div>
+    );
 }
 
 Products.getLayout = function getLayout(page){
@@ -11,15 +14,6 @@ Products.getLayout = function getLayout(page){
             {page}
         </ProductsLayout>
     );
-}
-
-export async function getStaticProps(){
-    return {
-        redirect: {
-            destination: `/products/Fall_Limited_Edition_Sneakers/999`,
-            permanent: false,
-        },
-    }
 }
 
 export default Products;

@@ -27,6 +27,7 @@ function Header(props) {
                             layout='fill'
                             objectFit='contain'
                             alt="hamburger"
+                            priority
                         />
                     </div>
                 </section>
