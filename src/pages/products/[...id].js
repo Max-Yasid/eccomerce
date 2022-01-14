@@ -13,13 +13,13 @@ import CloseIcon from '../../assets/icons/icon-close.svg';
 import { useProductsContext } from '../../context/productsContext';
 import ScrollableProductsList from '../../components/ScrollableProductsList';
 
-function id({ params, productInfo }) {
+function Id({ params, productInfo }) {
   const { store: { products }, dispatch } = useProductsContext();
   const [quantity, setQuantity] = useState(1);
   const [isLightBoxShowing, setIsLightBoxShowing] = useState(false);
   const [productDiscount, setProductDiscount] = useState(undefined);
   const currentlyProductIndex = products.findIndex(product => parseInt(product.id) == parseInt(params.id[1]));
-  if(!productInfo){
+  if(!productInfo){ 
     productInfo = products[currentlyProductIndex];
   }
 
@@ -167,9 +167,7 @@ function id({ params, productInfo }) {
   );
 }
 
-export default id;
-
-id.getLayout = function(page){
+Id.getLayout = function(page){
   return <ProductsLayout>
     {page}
   </ProductsLayout>
@@ -201,3 +199,5 @@ export async function getStaticPaths(){
     fallback: false,
   }
 }
+
+export default Id;
