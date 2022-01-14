@@ -1,0 +1,10 @@
+.products{
+    display: grid;
+    grid-template-columns: 100vw;
+}
+@media only screen and (min-width: 600px){
+    .products{
+        grid-template-columns: 50% 50%;
+        margin: 80px 100px 80px 100px;
+    }
+}

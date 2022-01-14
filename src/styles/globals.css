@@ -1,0 +1,24 @@
+:root{
+  --main-color: hsl(26, 100%, 55%);
+  --secondary-color: hsl(25, 100%, 94%);
+
+  --main-font: 'Kumbh Sans', sans-serif;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.borde{
+  border: 2px solid black;
+}

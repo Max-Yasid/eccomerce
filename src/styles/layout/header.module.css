@@ -1,0 +1,184 @@
+.header{
+    position: relative;
+}
+.navbar{
+    height: 16.5vw;
+    max-height: 75px;
+    min-height: 60px;
+    display: grid;
+    grid-template-columns: 15% 40% 45%;
+    width: 100%;
+    border-bottom: 3px solid hsl(223, 64%, 98%);
+}
+.navbar__hamburgerContainer{
+    padding-left: 20%;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.navbar__hamburger{
+    width: 100%;
+    height: 4vw;
+    max-height: 22px;
+    position: relative;
+}
+.navbar__navigationMenu{
+    display: none;
+}
+.navbar__logoContainer{
+    display: flex;
+    justify-content: center;
+}
+.navbar__logo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.navbar__LinkContainer{
+    text-align: center;
+    padding: 0 20px;
+    height: 100%;
+}
+.navbar__link{
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: flex-end;
+    height: 25%;
+    color: hsl(219, 9%, 45%);
+}
+.navbar__link:hover{
+    color: hsl(220, 13%, 13%);
+}
+.navbar__LinkContainer--active{
+    position: relative;
+}
+.navbar__LinkContainer--active:after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: calc(100% - 40px);
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 20px;
+}
+.navbar__LinkContainer--active .navbar__link{
+    color: hsl(220, 13%, 13%);
+}
+.navbar__optionsMenu{
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 37% 33%;
+    justify-content: end;
+}
+.navbar__cartContainer{
+    display: grid;
+    place-items: center;
+}
+.navbar__cart{
+    min-height: 18px;
+    min-width: 20px;
+    position: relative;
+    width: 8vw;
+    height: 6vw;
+    max-width: 32px;
+    max-height: 34px;
+}
+.navbar__cartIcon{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    fill: rgb(122, 122, 122);
+    cursor: pointer;
+}
+.navbar__cartItemsCounter{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: -6px;
+    margin-right: -7.5px;
+    color: white;
+    border-radius: 10px;
+    width: 70%;
+    z-index: 9;
+    text-align: center;
+    font-size: 10px;
+    background-color: var(--main-color);
+}
+.navbar__avatarContainer{
+    display: flex;
+    align-items: center;
+}
+.navbar__avatar{
+    position: relative;
+    width: 9vw;
+    height: 7vw;
+    max-width: 32px;
+    max-height: 34px;
+    min-height: 20px;
+    min-width: 22px;
+}
+@media only screen and (min-width: 425px){
+    .navbar__optionsMenu{
+        grid-template-columns: 30% 28%;
+    }
+}
+@media only screen and (min-width: 600px){
+    .navbar{
+        grid-template-columns: 20% 65% 15%;
+        width: 100%;
+        max-height: none;
+        min-height: none;
+        height: 80px;
+    }
+    .navbar__hamburgerContainer{
+        display: none;
+    }
+    .navbar__logoContainer{
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 10%;
+        padding-top: 20px;
+    }
+    .navbar__logo{
+        width: 70%;
+        height: 30%;
+    }
+    .navbar__navigationMenu{
+        display: flex;
+        padding-top: 30px;
+    }
+    .navbar__optionsMenu{
+        padding-top: 15px;
+        grid-template-columns: 40% 50%;
+    }
+    .navbar__cartContainer{
+        display: flex;
+        align-items: flex-start;
+        padding-top: 10px;
+        justify-content: center;
+    }
+    .navbar__cart{
+        width: 25px;
+        height: 25px;
+    }
+    .navbar__avatarContainer{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .navbar__avatar{
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+        border-radius: 100%;
+        box-sizing: content-box;
+        border: 2px solid transparent;
+    }
+    .navbar__avatar:hover{
+        border: 2px solid var(--main-color);
+    }
+}
